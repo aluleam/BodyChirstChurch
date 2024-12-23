@@ -1,0 +1,373 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #f7a440;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #d88e31;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.upcoming-events h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.upcoming-events ul {
+    list-style: none;
+    text-align: center;
+}
+
+.upcoming-events li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Ministries Section */
+.ministries {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.ministries h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.ministry-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ministry-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    width: 22%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ministry-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.ministry-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.ministry-btn {
+    padding: 10px 20px;
+    background-color: #f7a440;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.ministry-btn:hover {
+    background-color: #d88e31;
+}
+
+/* Sermons Section */
+.sermons {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.sermons h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sermon-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sermon-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sermon-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.sermon-item p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.sermon-btn {
+    padding: 10px 20px;
+    background-color: #f7a440;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.sermon-btn:hover {
+    background-color: #d88e31;
+}
+
+/* Prayer Wall Section */
+.prayer-wall {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.prayer-wall h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prayer-wall form textarea {
+    width: 80%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.prayer-wall form button {
+    padding: 10px 20px;
+    background-color: #f7a440;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+}
+
+.prayer-wall form button:hover {
+    background-color: #d88e31;
+}
+
+.prayer-requests {
+    margin-top: 30px;
+}
+
+.prayer-item {
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Giving Section */
+.online-giving {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.online-giving h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.giving-btn {
+    padding: 15px 30px;
+    background-color: #f7a440;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+.giving-btn:hover {
+    background-color: #d88e31;
+}
+
+/* Testimonials Section */
+.volunteer-testimonials {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.volunteer-testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.volunteer-testimonial {
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.volunteer-testimonial footer {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us form button {
+    padding: 10px 20px;
+    background-color: #f7a440;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-us form button:hover {
+    background-color: #d88e31;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+footer a {
+    color: #f7a440;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
