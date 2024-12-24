@@ -3,29 +3,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use a more modern font */
 }
 
 body {
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    font-size: 1.1em;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
 }
+
+.sub-container {
+    margin: 20px auto 30px;
+    text-align: center;
+    position: relative;
+}
+
+.sub-container p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto; 
+    display: inline-block; 
+    text-align: center;
+}
+
+.highlighted {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0 10px; 
+    font-weight: bold; 
+    color: #ffd700;
+}
+
 
 /* Header Section */
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    object-fit: cover;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 nav ul {
@@ -42,39 +82,25 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #f7a440;
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-}
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
 
 .cta-btn {
     padding: 15px 30px;
     background-color: #f7a440;
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+    font-size: 1.3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
@@ -84,78 +110,156 @@ nav ul li a:hover {
 /* About Section */
 .about {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.05);
 }
 
 .about h2 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #666;
 }
+
 
 /* Upcoming Events Section */
 .upcoming-events {
-    background-color: #f7f7f7;
-    padding: 60px 0;
+    background-color: #f9f9f9; /* Light background color */
+    padding: 80px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
 .upcoming-events h2 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.upcoming-events h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #f7a440;
 }
 
 .upcoming-events ul {
     list-style: none;
-    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .upcoming-events li {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1.3em;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #e1e1e1; /* Subtle border for the event cards */
 }
+
+.upcoming-events li:hover {
+    transform: translateY(-12px);
+    color: #f7a440;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-events li strong {
+    color: #f7a440;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.upcoming-events li span {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    color: #777; /* Lighter color for event dates */
+}
+
+.upcoming-events li p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .upcoming-events h2 {
+        font-size: 2.4em;
+    }
+
+    .upcoming-events li {
+        font-size: 1.1em;
+    }
+}
+
 
 /* Ministries Section */
 .ministries {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 80px 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.05);
 }
 
 .ministries h2 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 .ministry-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .ministry-card {
     background-color: #f7f7f7;
-    padding: 20px;
-    width: 22%;
+    padding: 30px;
+    width: 30%;
     margin: 10px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 .ministry-card h3 {
     font-size: 1.8em;
     margin-bottom: 15px;
+    color: #333;
 }
 
 .ministry-card p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 20px;
+    color: #666;
 }
 
 .ministry-btn {
@@ -163,40 +267,51 @@ nav ul li a:hover {
     background-color: #f7a440;
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
-    border-radius: 5px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .ministry-btn:hover {
     background-color: #d88e31;
+    transform: translateY(-3px);
 }
 
 /* Sermons Section */
 .sermons {
     background-color: #f7f7f7;
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .sermons h2 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 .sermon-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .sermon-item {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     width: 30%;
     margin: 10px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sermon-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 .sermon-item h3 {
@@ -205,8 +320,9 @@ nav ul li a:hover {
 }
 
 .sermon-item p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 20px;
+    color: #666;
 }
 
 .sermon-btn {
@@ -214,160 +330,332 @@ nav ul li a:hover {
     background-color: #f7a440;
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
-    border-radius: 5px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sermon-btn:hover {
     background-color: #d88e31;
+    transform: translateY(-3px);
 }
+
+
+
+
 
 /* Prayer Wall Section */
 .prayer-wall {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 100px 0;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.05); /* Soft glow effect */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.prayer-wall::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(247, 164, 64, 0.2), rgba(255, 255, 255, 0.8));
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .prayer-wall h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3.4em;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 50px;
     text-align: center;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Glow effect for title */
+}
+
+.prayer-wall form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .prayer-wall form textarea {
     width: 80%;
-    height: 150px;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 1.2em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 650px;
+    height: 220px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 1.4em;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    resize: vertical;
+    transition: all 0.3s ease-in-out;
+}
+
+.prayer-wall form textarea:focus {
+    border-color: #f7a440;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(247, 164, 64, 0.3);
+    outline: none;
 }
 
 .prayer-wall form button {
-    padding: 10px 20px;
+    padding: 18px 35px;
     background-color: #f7a440;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.6em;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.prayer-wall form button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #d88e31;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.prayer-wall form button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .prayer-wall form button:hover {
     background-color: #d88e31;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-.prayer-requests {
-    margin-top: 30px;
+.prayer-wall form button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.prayer-item {
-    background-color: #f7f7f7;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+.prayer-wall form .hint-text {
+    font-size: 1.1em;
+    color: #777;
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
 }
+
+/* Keyframe Animation for Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 
 /* Giving Section */
 .online-giving {
-    background-color: #f7f7f7;
-    padding: 60px 0;
+    background: linear-gradient(135deg, #f7a440, #e8681e); /* Warm gradient */
+    color: #fff;
+    padding: 100px 20px;
     text-align: center;
+    border-radius: 15px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
+    position: relative;
+    overflow: hidden;
+}
+
+.online-giving::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/bible.jpg') no-repeat center/cover;
+    opacity: 0.15; /* Subtle overlay effect */
+    z-index: 0;
 }
 
 .online-giving h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    z-index: 1;
+    position: relative;
+}
+
+.online-giving p {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9); /* Slightly lighter for contrast */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .giving-btn {
-    padding: 15px 30px;
-    background-color: #f7a440;
-    color: #fff;
+    display: inline-block;
+    padding: 18px 40px;
+    background: #fff;
+    color: #f7a440;
     text-decoration: none;
-    font-size: 1.5em;
-    border-radius: 5px;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded button for a softer look */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add depth to the button */
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    position: relative;
 }
 
 .giving-btn:hover {
-    background-color: #d88e31;
+    background: #d88e31;
+    color: #fff;
+    transform: scale(1.05) translateY(-5px);
 }
 
-/* Testimonials Section */
-.volunteer-testimonials {
-    background-color: #fff;
-    padding: 60px 0;
-}
 
-.volunteer-testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
     text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
-.volunteer-testimonial {
-    margin-bottom: 30px;
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+    font-size: 18px;
+    color: #3498db;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bible-verses {
+    padding: 30px;
+    background: linear-gradient(135deg, #f3ec78, #af4261);
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#bible-verses h2 {
     text-align: center;
-    font-style: italic;
-}
-
-.volunteer-testimonial footer {
-    margin-top: 10px;
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     font-weight: bold;
+    animation: fadeIn 1s ease-out;
 }
 
-/* Contact Us Section */
-.contact-us {
-    background-color: #f7f7f7;
-    padding: 60px 0;
-}
-
-.contact-us h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+#bible-verse {
+    font-size: 20px;
+    font-style: italic;
+    color: #fdfdfd;
     text-align: center;
+    font-family: 'Georgia', serif;
+    margin-top: 20px;
+    line-height: 1.6;
+    transition: transform 0.3s ease-in-out;
 }
 
-.contact-us form input,
-.contact-us form textarea {
-    width: 80%;
-    padding: 10px;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#bible-verse:hover {
+    transform: scale(1.05);
+    color: #ffd700;
 }
 
-.contact-us form button {
-    padding: 10px 20px;
-    background-color: #f7a440;
-    color: #fff;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.contact-us form button:hover {
-    background-color: #d88e31;
-}
 
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
 
-footer p {
-    font-size: 1em;
-}
 
-footer a {
-    color: #f7a440;
-    text-decoration: none;
-}
 
-footer a:hover {
-    text-decoration: underline;
-}
+
