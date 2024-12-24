@@ -5,25 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to our church. A place of worship, community, and love.">
     <link rel="stylesheet" href="styles.css">
-    <title>Body of Christ Church</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Body of Christ Church - Login</title>
 </head>
-<h1 class = "welcome">Welcome to Body of Christ Church</h1>
-
 <body>
+    <!-- Background overlay for effect -->
+    <div class="background-overlay"></div>
 
     <div class="login-container">
-        <img src="images/bodyofchristlogo.JPG " alt="Logo" class="logo">
+        <!-- Logo -->
+        <img src="images/bodyofchristlogo.JPG" alt="Logo" class="logo">
+
+        <!-- Motivational Tagline -->
+        <p class="tagline">"A place of worship, community, and love."</p>
+
+        <!-- Login Form -->
         <form action="/login" method="post">
-            <input type="text" id="username" name="username" placeholder="Enter your username" required><br><br>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
-    
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
             <button type="submit">Login</button>
         </form>
+
+        <!-- Links -->
         <a href="/forgot-password" class="btn-link">Forgot Password?</a>
         <a href="/create-account" class="btn-link">Create Account</a>
-        <a href="/guest" class="btn-link">Guest?</a>
+        <a href="guest.html" class="btn-link">Continue as Guest</a>
     </div>
-    
+
+
 </body>
 </html>
