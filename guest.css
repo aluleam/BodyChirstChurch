@@ -93,8 +93,11 @@ body {
         text-shadow: 0 0 20px rgba(72, 239, 128, 1), 0 0 40px rgba(72, 239, 128, 0.7);
     }
 }
-
-
+.contact-us {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .container {
     width: 80%;
     max-width: 1200px;
