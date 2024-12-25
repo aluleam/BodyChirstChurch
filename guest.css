@@ -1,9 +1,9 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Use a more modern font */
+    font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -11,7 +11,89 @@ body {
     color: #333;
     line-height: 1.6;
     font-size: 1.1em;
+   
 }
+
+.hero {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.waviy {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.waviy > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.waviy span {
+    display: inline-block;
+    animation: wave 3s infinite ease-in-out;
+    opacity: 0;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff9800, #f4c136, #e91e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.waviy .space {
+    display: inline-block;
+    width: 1em; 
+}
+
+.waviy span:nth-child(odd) {
+    animation-delay: calc(var(--i) * 0.3s);
+}
+
+.waviy span:nth-child(even) {
+    animation-delay: calc(var(--i) * 0.3s + 0.5s);
+}
+
+.church {
+    margin-top: 30px; 
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; /* Adds space between letters */
+    background: linear-gradient(90deg, #4caf50, #009688, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+    text-shadow: 0 0 15px rgba(72, 239, 128, 0.7);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-15px); /* Slightly more pronounced bounce */
+        opacity: 0.9;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(72, 239, 128, 0.7), 0 0 20px rgba(72, 239, 128, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(72, 239, 128, 1), 0 0 40px rgba(72, 239, 128, 0.7);
+    }
+}
+
 
 .container {
     width: 80%;
@@ -90,8 +172,6 @@ nav ul li a:hover {
     color: #f7a440;
 }
 
-
-
 .cta-btn {
     padding: 15px 30px;
     background-color: #f7a440;
@@ -126,8 +206,6 @@ nav ul li a:hover {
     color: #666;
 }
 
-
-/* Upcoming Events Section */
 .upcoming-events {
     background-color: #f9f9f9; /* Light background color */
     padding: 80px 20px;
@@ -137,10 +215,10 @@ nav ul li a:hover {
 
 .upcoming-events h2 {
     text-align: center;
-    font-size: 2.8em;
+    font-size: 3.2em;
     margin-bottom: 40px;
-    color: #333;
-    font-weight: 700;
+    color: #b8860b; /* Gold color */
+    font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
     position: relative;
@@ -162,7 +240,9 @@ nav ul li a:hover {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 30px;
+    justify-items: center;
+    align-items: start;
 }
 
 .upcoming-events li {
@@ -174,6 +254,7 @@ nav ul li a:hover {
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     border: 1px solid #e1e1e1; /* Subtle border for the event cards */
+    width: 100%;
 }
 
 .upcoming-events li:hover {
@@ -204,146 +285,253 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .upcoming-events h2 {
-        font-size: 2.4em;
+        font-size: 2.6em;
     }
 
     .upcoming-events li {
         font-size: 1.1em;
+        padding: 25px;
+    }
+
+    .upcoming-events li strong {
+        font-size: 1.4em;
+    }
+
+    .upcoming-events li span {
+        font-size: 1.1em;
+    }
+
+    .upcoming-events li p {
+        font-size: 1em;
     }
 }
 
-
-/* Ministries Section */
 .ministries {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 80px 0;
     box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.05);
+    color: #444;
 }
 
 .ministries h2 {
     text-align: center;
-    font-size: 2.8em;
+    font-size: 3.2em;
     margin-bottom: 40px;
-    color: #333;
+    color: #b8860b; /* Gold color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ministries p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #666;
+    line-height: 1.6;
 }
 
 .ministry-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: start;
 }
 
 .ministry-card {
-    background-color: #f7f7f7;
-    padding: 30px;
-    width: 30%;
-    margin: 10px;
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
 .ministry-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
 }
 
 .ministry-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #333;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .ministry-card p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 20px;
     color: #666;
+    line-height: 1.6;
 }
 
 .ministry-btn {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #f7a440;
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ministry-btn:hover {
     background-color: #d88e31;
     transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Sermons Section */
+@media (max-width: 768px) {
+    .ministries h2 {
+        font-size: 2.6em;
+    }
+
+    .ministries p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .ministry-card {
+        padding: 25px;
+        width: 90%;
+    }
+
+    .ministry-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .ministry-card h3 {
+        font-size: 1.8em;
+    }
+
+    .ministry-card p {
+        font-size: 1.1em;
+    }
+}
+
+
 .sermons {
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
     padding: 80px 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.05);
+    color: #444;
 }
 
 .sermons h2 {
     text-align: center;
-    font-size: 2.8em;
+    font-size: 3.2em;
     margin-bottom: 40px;
-    color: #333;
+    color: #b8860b; /* Gold color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sermons p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #666;
+    line-height: 1.6;
 }
 
 .sermon-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: start;
 }
 
 .sermon-item {
     background-color: #fff;
-    padding: 30px;
-    width: 30%;
-    margin: 10px;
+    padding: 40px;
+    width: 100%;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
 .sermon-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
 }
 
 .sermon-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .sermon-item p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 20px;
     color: #666;
+    line-height: 1.6;
 }
 
 .sermon-btn {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #f7a440;
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sermon-btn:hover {
     background-color: #d88e31;
     transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+    .sermons h2 {
+        font-size: 2.6em;
+    }
 
+    .sermons p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
 
+    .sermon-item {
+        padding: 25px;
+        width: 90%;
+    }
 
+    .sermon-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .sermon-item h3 {
+        font-size: 1.8em;
+    }
+
+    .sermon-item p {
+        font-size: 1.1em;
+    }
+}
 
 /* Prayer Wall Section */
 .prayer-wall {
@@ -433,7 +621,7 @@ nav ul li a:hover {
     left: 50%;
     width: 300%;
     height: 300%;
-    background-color: #d88e31;
+    background-color: #b8860b;
     transition: all 0.4s ease;
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
@@ -445,7 +633,7 @@ nav ul li a:hover {
 }
 
 .prayer-wall form button:hover {
-    background-color: #d88e31;
+    background-color: #b8860b;
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
@@ -464,7 +652,6 @@ nav ul li a:hover {
     opacity: 0.8;
 }
 
-/* Keyframe Animation for Fade-In */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -481,11 +668,11 @@ nav ul li a:hover {
 
 /* Giving Section */
 .online-giving {
-    background: linear-gradient(135deg, #f7a440, #e8681e); /* Warm gradient */
+    background: linear-gradient(135deg, #f7a440, #e8681e);
     color: #fff;
     padding: 100px 20px;
     text-align: center;
-    border-radius: 15px; /* Slightly rounded corners for a modern look */
+    border-radius: 15px; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
     position: relative;
     overflow: hidden;
@@ -499,7 +686,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: url('images/bible.jpg') no-repeat center/cover;
-    opacity: 0.15; /* Subtle overlay effect */
+    opacity: 0.15;
     z-index: 0;
 }
 
@@ -528,7 +715,7 @@ nav ul li a:hover {
     display: inline-block;
     padding: 18px 40px;
     background: #fff;
-    color: #f7a440;
+    color: #b8860b;
     text-decoration: none;
     font-size: 1.6em;
     font-weight: bold;
@@ -540,25 +727,10 @@ nav ul li a:hover {
 }
 
 .giving-btn:hover {
-    background: #d88e31;
+    background: #b8860b;
     color: #fff;
     transform: scale(1.05) translateY(-5px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .loading-container {
     display: flex;
@@ -574,7 +746,7 @@ nav ul li a:hover {
 
 .spinner {
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
+    border-top: 4px solid #b8860b;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -589,25 +761,9 @@ nav ul li a:hover {
 
 .loading-container p {
     font-size: 18px;
-    color: #3498db;
+    color: #b8860b;
     font-family: 'Arial', sans-serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #bible-verses {
     padding: 30px;
@@ -642,7 +798,7 @@ nav ul li a:hover {
 
 #bible-verse:hover {
     transform: scale(1.05);
-    color: #ffd700;
+    color: #b8860b;
 }
 
 @keyframes fadeIn {
