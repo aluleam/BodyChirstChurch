@@ -99,8 +99,8 @@ body {
     margin-right: auto;
 }
 .container {
-    width: 80%;
-    max-width: 1200px;
+    
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 0 20px;
@@ -257,7 +257,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    border: 1px solid #e1e1e1; /* Subtle border for the event cards */
+    border: 1px solid #e1e1e1; 
     width: 100%;
 }
 
