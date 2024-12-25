@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Body of Christ Church website. Explore our services, events, and ministries. Join us in faith and fellowship.">
+    <meta name="author" content="Body of Christ Church">
+    <title>Body of Christ Church</title>
+    <link rel="stylesheet" href="guest.css">
+    <link rel="icon" href="images/bodyofchristlogo.JPG" type="image/jpeg">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/bodyofchristlogo.JPG" alt="Body of Christ Church Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="changes.html">Events</a></li>
+                    <li><a href="https://www.youtube.com/@bodyofchristchurchkanisala8089">Sermons</a></li>
+                    <li><a href="#prayers">Prayers</a></li>
+                    <li><a href="donation.html">Giving</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="waviy">
+            <div>
+                <span style="--i:1">W</span>
+                <span style="--i:2">E</span>
+                <span style="--i:3">L</span>
+                <span style="--i:4">C</span>
+                <span style="--i:5">O</span>
+                <span style="--i:6">M</span>
+                <span style="--i:7">E</span>
+                <span class="space"></span>
+                <span style="--i:8">T</span>
+                <span style="--i:9">O</span>
+                <span class="space"></span>
+                <span style="--i:10">B</span>
+                <span style="--i:11">O</span>
+                <span style="--i:12">D</span>
+                <span style="--i:13">Y</span>
+                <span class="space"></span>
+                <span style="--i:14">O</span>
+                <span style="--i:15">F</span>
+                <span class="space"></span>
+                <span style="--i:16">C</span>
+                <span style="--i:17">H</span>
+                <span style="--i:18">R</span>
+                <span style="--i:19">I</span>
+                <span style="--i:20">S</span>
+                <span style="--i:21">T</span>
+            </div>
+            <div class="church">
+                <span style="--i:22">C</span>
+                <span style="--i:23">H</span>
+                <span style="--i:24">U</span>
+                <span style="--i:25">R</span>
+                <span style="--i:26">C</span>
+                <span style="--i:27">H</span>
+            </div>
+        </div>
+    </div>
+    
+
+
+   <style>
+            * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.5s ease-in-out;
+        }
+
+        .slideshow-container {
+        max-width: 85%;
+        position: relative;
+        margin: auto;
+        padding: 0 5%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        }
+
+        .slideshow-container:hover img {
+        transform: scale(1.1);
+        }
+
+        .text {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .numbertext {
+        color: #fff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+        }
+        </style>
+            
+    
+    <div class="slideshow-container">
+    
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="images/IMG_E1543.JPG" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/IMG_E1541.JPG" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/bodyofchristlogo.JPG" style="width:100%">
+      </div>
+    
+    </div>
+    
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+      let slideIndex = 0;
+      showSlides();
+    
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); 
+      }
+    </script>
+        
+        <div class="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>
+                    <strong>Church Service</strong>
+                    <span>January 15, 2024</span>
+                    <p>Join us for an inspiring service led by our senior pastor. We will explore topics of faith and fellowship.</p>
+                </li>
+                <li>
+                    <strong>Charity Event</strong>
+                    <span>February 10, 2024</span>
+                    <p>Help us raise funds for the local community. Your support will make a difference in many lives.</p>
+                </li>
+                <li>
+                    <strong>Bible Study</strong>
+                    <span>March 5, 2024</span>
+                    <p>Dig deeper into the scriptures and learn the lessons that apply to our daily lives.</p>
+                </li>
+            </ul>
+        </div>
+    
+    <!-- Ministries Section -->
+    <section id="ministries" class="ministries">
+        <div class="container">
+            <h2>Our Ministries</h2>
+            <p>Explore the different ministries we have at Body of Christ Church. Each ministry provides an opportunity to grow in faith and serve others.</p>
+            <div class="ministry-cards">
+                <div class="ministry-card">
+                    <h3>Youth Ministry</h3>
+                    <p>Our youth ministry empowers young people to grow in faith and make a positive impact in the community.</p>
+                    <a href="registration.html" class="ministry-btn">Join us</a>
+                </div>
+                <div class="ministry-card">
+                    <h3>Family Ministry</h3>
+                    <p>Join a group that nurtures family bonds, fostering growth in Christ through fellowship, study, and prayer.</p>
+                    <a href="registration.html" class="ministry-btn">Join us</a>
+                </div>
+                <div class="ministry-card">
+                    <h3>Music Ministry</h3>
+                    <p>Our music ministry helps lead worship through song, creating a powerful atmosphere of praise and adoration.</p>
+                    <a href="registration.html" class="ministry-btn">Join us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sermons Section -->
+    <section id="sermons" class="sermons">
+        <div class="container">
+            <h2>Sermon Archive</h2>
+            <p>Catch up on past sermons and listen to messages from our church leaders.</p>
+            <div class="sermon-list">
+                <div class="sermon-item">
+                    <h3>Title of Recent Sermon</h3>
+                    <p>Date: December 10th, 2024</p>
+                    <a href="/sermons/recent-sermon" class="sermon-btn">Watch Now</a>
+                </div>
+                <div class="sermon-item">
+                    <h3>Faith in Action</h3>
+                    <p>Date: November 28th, 2024</p>
+                    <a href="/sermons/faith-in-action" class="sermon-btn">Watch Now</a>
+                </div>
+                <div class="sermon-item">
+                    <h3>Living With Purpose</h3>
+                    <p>Date: November 15th, 2024</p>
+                    <a href="/sermons/living-with-purpose" class="sermon-btn">Watch Now</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+  
+<style></style>
+
+    <section id="bible-verses" class="bible-verses">
+        <div class="container">
+            <h2>Inspirational Bible Verses</h2>
+            <p id="bible-verse-text" class="verse-text">Loading verse...</p>
+            <p id="bible-verse-reference" class="verse-reference"></p> 
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('https://bible-api.com/?random=verse')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); 
+
+                    const verseText = data.text;
+                    const verseReference = data.reference;
+
+                    const verseTextElement = document.getElementById('bible-verse-text');
+                    const verseReferenceElement = document.getElementById('bible-verse-reference');
+                    verseTextElement.innerHTML = `<strong>${verseText}</strong>`;
+                    verseReferenceElement.innerHTML = `<em>- ${verseReference}</em>`;
+                })
+                .catch(error => {
+                    // Handle errors (e.g., API failure)
+                    const verseTextElement = document.getElementById('bible-verse-text');
+                    const verseReferenceElement = document.getElementById('bible-verse-reference');
+                    verseTextElement.innerHTML = "<span class='error-message'>Sorry, we couldn't fetch a verse at this time.</span>";
+                    verseReferenceElement.innerHTML = "";
+                    console.error('Error fetching Bible verse:', error);
+                });
+        });
+    </script>
+        
+
+            <!-- Prayer Wall Section -->
+            <section id="prayers" class="prayer-wall">
+                <div class="container">
+                    <h2>Prayer Wall</h2>
+                    <p>Submit your prayer request and join us in praying for others.</p>
+                    <form action="/submit-prayer-wall" method="post">
+                        <textarea name="prayer_request" placeholder="Enter your prayer request here..." required></textarea>
+                        <button type="submit">Submit Request</button>
+                    </form>
+                    <div class="prayer-requests">
+                        <div class="prayer-item">
+                            <p>Pray for healing and comfort for those struggling with illness.</p>
+                        </div>
+                        <div class="prayer-item">
+                            <p>Pray for strength and peace for our community members facing challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Contact Us Section -->
+            <section id="contact" class="contact-us">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <div class="contact-info">
+                        <div class="contact-form">
+                            <h3>Get in Touch</h3>
+                            <form action="https://formspree.io/f/xnnnnblb" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Your Message</label>
+                                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="location-map" id="map-container">
+                            <h3>Our Location</h3>
+                            <p>6201 S Lyncrest Ave, Sioux Falls, SD 57108</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+                <!-- Styling for Map and Form Section -->
+                <style>
+                #contact {
+                    background-color: #f9f9f9;
+                    padding: 50px 0;
+                }
+
+                #contact h2 {
+                    text-align: center;
+                    font-size: 2.5em;
+                    color: #333;
+                    margin-bottom: 30px;
+                }
+
+                .contact-info {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 30px;
+                }
+
+                .contact-form {
+                    flex: 1;
+                    background-color: #fff;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                }
+
+                .contact-form h3 {
+                    font-size: 2em;
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+
+                .form-group {
+                    margin-bottom: 20px;
+                }
+
+                .form-group label {
+                    display: block;
+                    font-size: 1em;
+                    margin-bottom: 5px;
+                    color: #555;
+                }
+
+                .form-group input,
+                .form-group textarea {
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 1em;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    box-sizing: border-box;
+                    transition: all 0.3s ease;
+                }
+
+                .form-group input:focus,
+                .form-group textarea:focus {
+                    border-color: #f7a440;
+                    box-shadow: 0 0 5px rgba(247, 164, 64, 0.7);
+                }
+
+                .submit-btn {
+                    display: inline-block;
+                    background-color: #f7a440;
+                    color: #fff;
+                    padding: 15px 25px;
+                    font-size: 1.2em;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    border: none;
+                    transition: background-color 0.3s ease, transform 0.3s ease;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .submit-btn:hover {
+                    background-color: #d88e31;
+                    transform: translateY(-5px);
+                }
+
+                /* Map Styling */
+                #map-container {
+                    flex: 1;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                    text-align: center;
+                }
+
+                #map-container h3 {
+                    font-size: 1.8em;
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+
+                iframe {
+                    border-radius: 10px;
+                    transition: transform 0.3s ease;
+                    width: 100%;
+                }
+
+                iframe:hover {
+                    transform: scale(1.05);
+                }
+                </style>
+
+    <!-- Script for Google Map -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const mapContainer = document.getElementById("map-container");
+
+        // Create the iframe element for Google Maps
+        const mapIframe = document.createElement("iframe");
+        mapIframe.src = "https://www.google.com/maps?q=Oak+Hills+Baptist+Church,6201+S+Lyncrest+Ave,Sioux+Falls,SD,57108&z=15&output=embed";
+        mapIframe.width = "100%";
+        mapIframe.height = "300";
+        mapIframe.style.border = "0";
+        mapIframe.allowFullscreen = "";
+        mapIframe.loading = "lazy";
+
+        mapContainer.appendChild(mapIframe);
+    });
+    </script>
++
+    <script src="script.js"></script>
+</body>
+</html>
