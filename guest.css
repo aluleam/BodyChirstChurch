@@ -15,6 +15,9 @@ html, body {
     font-size: 1.1em;
    
 }
+
+
+
 .container-header {
     width: 100%;
     margin: 0 auto;
@@ -24,85 +27,7 @@ html, body {
     color: blue;
 }
 
-.hero {
-    text-align: center;
-    font-size: 3.5rem;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
 
-.waviy {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-}
-
-.waviy > div {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.waviy span {
-    display: inline-block;
-    animation: wave 3s infinite ease-in-out;
-    opacity: 0;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff9800, #f4c136, #e91e63);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-.waviy .space {
-    display: inline-block;
-    width: 1em; 
-}
-
-.waviy span:nth-child(odd) {
-    animation-delay: calc(var(--i) * 0.3s);
-}
-
-.waviy span:nth-child(even) {
-    animation-delay: calc(var(--i) * 0.3s + 0.5s);
-}
-
-.church {
-    margin-top: 30px; 
-    font-size: 4rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.2em; /* Adds space between letters */
-    background: linear-gradient(90deg, #4caf50, #009688, #00bcd4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s infinite alternate;
-    text-shadow: 0 0 15px rgba(72, 239, 128, 0.7);
-}
-
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-15px); /* Slightly more pronounced bounce */
-        opacity: 0.9;
-    }
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 10px rgba(72, 239, 128, 0.7), 0 0 20px rgba(72, 239, 128, 0.5);
-    }
-    100% {
-        text-shadow: 0 0 20px rgba(72, 239, 128, 1), 0 0 40px rgba(72, 239, 128, 0.7);
-    }
-}
 .contact-us {
     width: 100%;
     margin-left: auto;
@@ -142,14 +67,31 @@ html, body {
 }
 
 
-/* Header Section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 header {
     background-color: #333;
     color: #fff;
-    padding: 30px 0;
     width: 100%;
-    width: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 
 header .logo img {
@@ -157,38 +99,57 @@ header .logo img {
     width: auto;
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 header .logo img:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 20px; /* Space between menu items */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
-    overflow-x: auto;
-    white-space: nowrap;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    color: #f7a440;
+    background-color: #f7a440;
+    color: #fff;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+}
+
 
 .cta-btn {
     padding: 15px 30px;
@@ -333,7 +294,7 @@ nav ul li a:hover {
 
 .ministries h2 {
     text-align: center;
-    font-size: 3.2em;
+    font-size: smaller;
     margin-bottom: 40px;
     color: #b8860b; /* Gold color */
     font-weight: bold;
@@ -410,12 +371,12 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .ministries h2 {
-        font-size: 2.6em;
+        font-size: 25px;
     }
 
     .ministries p {
         font-size: 1em;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
     }
 
     .ministry-card {

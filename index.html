@@ -13,7 +13,7 @@
 
     <!-- Header Section -->
     <header>
-        <div class="container">
+        <div class="container-header">
             <div class="logo">
                 <img src="images/bodyofchristlogo.JPG" alt="Body of Christ Church Logo">
             </div>
@@ -32,46 +32,56 @@
         </div>
     </header>
 
-    <div class="hero">
-        <div class="waviy">
-            <div>
-                <span style="--i:1">W</span>
-                <span style="--i:2">E</span>
-                <span style="--i:3">L</span>
-                <span style="--i:4">C</span>
-                <span style="--i:5">O</span>
-                <span style="--i:6">M</span>
-                <span style="--i:7">E</span>
-                <span class="space"></span>
-                <span style="--i:8">T</span>
-                <span style="--i:9">O</span>
-                <span class="space"></span>
-                <span style="--i:10">B</span>
-                <span style="--i:11">O</span>
-                <span style="--i:12">D</span>
-                <span style="--i:13">Y</span>
-                <span class="space"></span>
-                <span style="--i:14">O</span>
-                <span style="--i:15">F</span>
-                <span class="space"></span>
-                <span style="--i:16">C</span>
-                <span style="--i:17">H</span>
-                <span style="--i:18">R</span>
-                <span style="--i:19">I</span>
-                <span style="--i:20">S</span>
-                <span style="--i:21">T</span>
-            </div>
-            <div class="church">
-                <span style="--i:22">C</span>
-                <span style="--i:23">H</span>
-                <span style="--i:24">U</span>
-                <span style="--i:25">R</span>
-                <span style="--i:26">C</span>
-                <span style="--i:27">H</span>
-            </div>
+
+    <style>
+    .hero {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: gold;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.8);
+        letter-spacing: 0.1em;
+        overflow: hidden;
+        white-space: nowrap; /* Prevent wrapping during typing */
+        animation: typing 4s steps(30, end) forwards; /* Typing animation only */
+        border-right: 3px solid gold; /* Caret effect */
+    }
+
+    /* Typing effect animation */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    /* Wrapping behavior for smaller screens */
+    @media (max-width: 600px) {
+        .hero {
+            white-space: normal; 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 0.5rem;
+            line-height: 1.5;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hero = document.querySelector(".hero");
+        setTimeout(() => {
+            hero.style.borderRight = "none";
+        }, 3000);
+    });
+</script>
+        <div class="hero">
+            WELCOME TO BODY OF CHRIST CHURCH
         </div>
-    </div>
-    
+        
 
 
    <style>
