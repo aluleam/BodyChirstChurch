@@ -32,121 +32,152 @@
         </div>
     </header>
 
-
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-      
-        body {
-          font-family: Verdana, sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #f7f7f7;
-        }
-      
-        .mySlides {
-          display: none;
-        }
-      
-        img {
-          width: 100%; /* Ensures images fit container width */
-          height: auto; /* Automatically adjust height based on width */
-          object-fit: cover; /* Cover the container while maintaining aspect ratio */
-          border-radius: 15px; /* Smooth rounded corners for the images */
-          transition: transform 0.5s ease-in-out; /* Smooth zoom effect when hovered */
-        }
-      
-        /* Slideshow container */
-        .slideshow-container {
-          max-width: 85%; /* 85% of the screen width */
-          position: relative;
-          margin: auto;
-          padding: 0 5%; /* Adds space on the left and right */
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds soft shadow for depth */
-          border-radius: 15px; /* Rounded corners for the container */
-          overflow: hidden; /* Ensures content stays within bounds */
-          aspect-ratio: 16/9; /* Ensures a 16:9 rectangular aspect ratio for the container */
-        }
-      
-        .slideshow-container:hover img {
-          transform: scale(1.1); /* Slight zoom effect on hover for images */
-        }
-      
-        /* Caption text */
-        .text {
-          color: #fff;
-          font-size: 16px;
-          padding: 10px;
-          position: absolute;
-          bottom: 10px;
-          width: 100%;
-          text-align: center;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds shadow for text legibility */
-          background-color: rgba(0, 0, 0, 0.4); /* Dark background for captions */
-        }
-      
-        /* Number text (1/3 etc) */
-        .numbertext {
-          color: #fff;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-      
-        /* The dots/bullets/indicators */
-        .dot {
-          height: 15px;
-          width: 15px;
-          margin: 0 5px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-      
-        .active {
-          background-color: #717171;
-        }
-      
-        /* Fading animation */
-        .fade {
-          animation-name: fade;
-          animation-duration: 1.5s;
-        }
-      
-        @keyframes fade {
-          from {
-            opacity: 0.4;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-      
+    <div class="hero">
+        <div class="waviy">
+            <div>
+                <span style="--i:1">W</span>
+                <span style="--i:2">E</span>
+                <span style="--i:3">L</span>
+                <span style="--i:4">C</span>
+                <span style="--i:5">O</span>
+                <span style="--i:6">M</span>
+                <span style="--i:7">E</span>
+                <span class="space"></span>
+                <span style="--i:8">T</span>
+                <span style="--i:9">O</span>
+                <span class="space"></span>
+                <span style="--i:10">B</span>
+                <span style="--i:11">O</span>
+                <span style="--i:12">D</span>
+                <span style="--i:13">Y</span>
+                <span class="space"></span>
+                <span style="--i:14">O</span>
+                <span style="--i:15">F</span>
+                <span class="space"></span>
+                <span style="--i:16">C</span>
+                <span style="--i:17">H</span>
+                <span style="--i:18">R</span>
+                <span style="--i:19">I</span>
+                <span style="--i:20">S</span>
+                <span style="--i:21">T</span>
+            </div>
+            <div class="church">
+                <span style="--i:22">C</span>
+                <span style="--i:23">H</span>
+                <span style="--i:24">U</span>
+                <span style="--i:25">R</span>
+                <span style="--i:26">C</span>
+                <span style="--i:27">H</span>
+            </div>
+        </div>
+    </div>
     
-      </style>
-      
+
+
+   <style>
+            * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.5s ease-in-out;
+        }
+
+        .slideshow-container {
+        max-width: 85%;
+        position: relative;
+        margin: auto;
+        padding: 0 5%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        }
+
+        .slideshow-container:hover img {
+        transform: scale(1.1);
+        }
+
+        .text {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .numbertext {
+        color: #fff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+        }
+        </style>
+            
     
     <div class="slideshow-container">
     
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img src="images/IMG_E1543.JPG" style="width:100%">
-        <div class="text">Caption One</div>
       </div>
     
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
         <img src="images/IMG_E1541.JPG" style="width:100%">
-        <div class="text">Caption Two</div>
       </div>
     
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
         <img src="images/bodyofchristlogo.JPG" style="width:100%">
-        <div class="text">Caption Three</div>
       </div>
     
     </div>
@@ -211,21 +242,22 @@
                 <div class="ministry-card">
                     <h3>Youth Ministry</h3>
                     <p>Our youth ministry empowers young people to grow in faith and make a positive impact in the community.</p>
-                    <a href="/youth-ministry" class="ministry-btn">Learn More</a>
+                    <a href="registration.html" class="ministry-btn">Join us</a>
                 </div>
                 <div class="ministry-card">
-                    <h3>Women’s Ministry</h3>
-                    <p>Join a group of inspiring women who support each other and grow in Christ through Bible studies and fellowship.</p>
-                    <a href="/womens-ministry" class="ministry-btn">Learn More</a>
+                    <h3>Family Ministry</h3>
+                    <p>Join a group that nurtures family bonds, fostering growth in Christ through fellowship, study, and prayer.</p>
+                    <a href="registration.html" class="ministry-btn">Join us</a>
                 </div>
                 <div class="ministry-card">
                     <h3>Music Ministry</h3>
                     <p>Our music ministry helps lead worship through song, creating a powerful atmosphere of praise and adoration.</p>
-                    <a href="/music-ministry" class="ministry-btn">Learn More</a>
+                    <a href="registration.html" class="ministry-btn">Join us</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Sermons Section -->
     <section id="sermons" class="sermons">
@@ -251,15 +283,43 @@
             </div>
         </div>
 
-
     </section>
   
-        <section id="bible-verses" class="bible-verses">
-            <div class="container">
-                <h2>Inspirational Bible Verses</h2>
-                <p id="bible-verse">Loading verse...</p> <!-- Placeholder text -->
-            </div>
-        </section>
+<style></style>
+
+    <section id="bible-verses" class="bible-verses">
+        <div class="container">
+            <h2>Inspirational Bible Verses</h2>
+            <p id="bible-verse-text" class="verse-text">Loading verse...</p>
+            <p id="bible-verse-reference" class="verse-reference"></p> 
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('https://bible-api.com/?random=verse')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); 
+
+                    const verseText = data.text;
+                    const verseReference = data.reference;
+
+                    const verseTextElement = document.getElementById('bible-verse-text');
+                    const verseReferenceElement = document.getElementById('bible-verse-reference');
+                    verseTextElement.innerHTML = `<strong>${verseText}</strong>`;
+                    verseReferenceElement.innerHTML = `<em>- ${verseReference}</em>`;
+                })
+                .catch(error => {
+                    // Handle errors (e.g., API failure)
+                    const verseTextElement = document.getElementById('bible-verse-text');
+                    const verseReferenceElement = document.getElementById('bible-verse-reference');
+                    verseTextElement.innerHTML = "<span class='error-message'>Sorry, we couldn't fetch a verse at this time.</span>";
+                    verseReferenceElement.innerHTML = "";
+                    console.error('Error fetching Bible verse:', error);
+                });
+        });
+    </script>
         
 
             <!-- Prayer Wall Section -->
@@ -291,7 +351,6 @@
                     <div class="contact-info">
                         <div class="contact-form">
                             <h3>Get in Touch</h3>
-                            <!-- Use Formspree endpoint here -->
                             <form action="https://formspree.io/f/xnnnnblb" method="POST">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
@@ -310,11 +369,12 @@
                         </div>
                         <div class="location-map" id="map-container">
                             <h3>Our Location</h3>
-                            <!-- Include a map or address info here -->
+                            <p>6201 S Lyncrest Ave, Sioux Falls, SD 57108</p>
                         </div>
                     </div>
                 </div>
             </section>
+
 
 
                 <!-- Styling for Map and Form Section -->
@@ -440,7 +500,6 @@
         mapIframe.allowFullscreen = "";
         mapIframe.loading = "lazy";
 
-        // Append the iframe to the map container
         mapContainer.appendChild(mapIframe);
     });
     </script>
