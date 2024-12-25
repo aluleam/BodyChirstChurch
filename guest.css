@@ -99,7 +99,7 @@ body {
     margin-right: auto;
 }
 .container {
-    
+   
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -111,6 +111,7 @@ body {
     margin: 20px auto 30px;
     text-align: center;
     position: relative;
+
 }
 
 .sub-container p {
@@ -546,10 +547,12 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     text-align: center;
+
 }
 
 .prayer-wall::before {
     content: '';
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -559,11 +562,12 @@ nav ul li a:hover {
     opacity: 0.3;
     pointer-events: none;
 }
-
+l
 .prayer-wall h2 {
     font-size: 3.4em;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 50px;
+    width: 100%;
     text-align: center;
     color: #333;
     font-weight: 700;
@@ -581,7 +585,6 @@ nav ul li a:hover {
 
 .prayer-wall form textarea {
     width: 100%;
-    max-width: 650px;
     height: 220px;
     margin-bottom: 30px;
     padding: 20px;
