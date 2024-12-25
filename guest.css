@@ -580,7 +580,7 @@ nav ul li a:hover {
 }
 
 .prayer-wall form textarea {
-    width: 80%;
+    width: 100%;
     max-width: 650px;
     height: 220px;
     margin-bottom: 30px;
@@ -605,13 +605,14 @@ nav ul li a:hover {
     padding: 18px 35px;
     background-color: #f7a440;
     color: #fff;
-    font-size: 1.6em;
+    font-size: 1em;
+    margin-bottom: 10px;
     border: none;
     border-radius: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 200;
     letter-spacing: 2px;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
