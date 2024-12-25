@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia', sans-serif;
 }
 
 html, body {
@@ -32,6 +32,7 @@ html, body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 13px;
 }
 .container {
    
@@ -63,7 +64,7 @@ html, body {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0 10px; 
     font-weight: bold; 
-    color: #ffd700;
+    color: #f7a440;
 }
 
 
@@ -72,8 +73,6 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 header {
     background-color: #333;
@@ -188,7 +187,7 @@ nav ul li a:hover {
 .upcoming-events {
     background-color: #f9f9f9; /* Light background color */
     padding: 80px 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia';
     color: #333;
 }
 
@@ -196,9 +195,9 @@ nav ul li a:hover {
     text-align: center;
     font-size: 3.2em;
     margin-bottom: 40px;
-    color: #b8860b; /* Gold color */
+    color: #f7a440; /* Gold color */
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
 }
@@ -219,7 +218,7 @@ nav ul li a:hover {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 15px;
     justify-items: center;
     align-items: start;
 }
@@ -238,12 +237,10 @@ nav ul li a:hover {
 
 .upcoming-events li:hover {
     transform: translateY(-12px);
-    color: #f7a440;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .upcoming-events li strong {
-    color: #f7a440;
     font-size: 1.5em;
     display: block;
     margin-bottom: 12px;
@@ -264,30 +261,30 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .upcoming-events h2 {
-        font-size: 2.6em;
+        font-size: 25px;
     }
 
     .upcoming-events li {
         font-size: 1.1em;
-        padding: 25px;
+        padding: 2px;
     }
 
     .upcoming-events li strong {
-        font-size: 1.4em;
+        font-size: 20px;
     }
 
     .upcoming-events li span {
-        font-size: 1.1em;
+        font-size: 20px;
     }
 
     .upcoming-events li p {
-        font-size: 1em;
+        font-size: 17px;
     }
 }
 
 .ministries {
     background-color: #f9f9f9;
-    padding: 80px 0;
+    padding: 2px 0;
     box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.05);
     color: #444;
 }
@@ -295,17 +292,17 @@ nav ul li a:hover {
 .ministries h2 {
     text-align: center;
     font-size: smaller;
-    margin-bottom: 40px;
-    color: #b8860b; /* Gold color */
+    margin-bottom: 5px;
+    color: #f7a440; /* Gold color */
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    
 }
 
 .ministries p {
     text-align: center;
     font-size: 1.1em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #666;
     line-height: 1.6;
 }
@@ -338,7 +335,7 @@ nav ul li a:hover {
 
 .ministry-card h3 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #333;
     font-weight: bold;
     text-transform: capitalize;
@@ -371,7 +368,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .ministries h2 {
-        font-size: 25px;
+        font-size: 25px; 
     }
 
     .ministries p {
@@ -380,21 +377,21 @@ nav ul li a:hover {
     }
 
     .ministry-card {
-        padding: 25px;
+        padding: 5px;
         width: 90%;
     }
 
     .ministry-btn {
         font-size: 1em;
-        padding: 10px 20px;
+        padding: 5px 15px;
     }
 
     .ministry-card h3 {
-        font-size: 1.8em;
+        font-size: 20px;
     }
 
     .ministry-card p {
-        font-size: 1.1em;
+        font-size: 17px;
     }
 }
 
@@ -408,9 +405,9 @@ nav ul li a:hover {
 
 .sermons h2 {
     text-align: center;
-    font-size: 3.2em;
+    font-size: 5em;
     margin-bottom: 40px;
-    color: #b8860b; /* Gold color */
+    color: #f7a440; /* Gold color */
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -459,7 +456,7 @@ nav ul li a:hover {
 }
 
 .sermon-item p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 20px;
     color: #666;
     line-height: 1.6;
@@ -467,7 +464,7 @@ nav ul li a:hover {
 
 .sermon-btn {
     padding: 12px 24px;
-    background-color: #f7a440;
+    background-color:#f7a440 ;
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
@@ -485,26 +482,27 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .sermons h2 {
-        font-size: 2.6em;
+        font-size: 25px;
+        margin-bottom: 5px;
     }
 
     .sermons p {
-        font-size: 1em;
-        margin-bottom: 30px;
+        font-size: 17px;
+        margin-bottom: 10px;
     }
 
     .sermon-item {
-        padding: 25px;
+        padding: 20px;
         width: 90%;
     }
 
     .sermon-btn {
         font-size: 1em;
-        padding: 10px 20px;
+        padding: 5px 15px;
     }
 
     .sermon-item h3 {
-        font-size: 1.8em;
+        font-size: 20px;
     }
 
     .sermon-item p {
@@ -512,10 +510,9 @@ nav ul li a:hover {
     }
 }
 
-/* Prayer Wall Section */
 .prayer-wall {
     background-color: #fff;
-    padding: 100px 0;
+    padding-top: 40px;
     box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.05); /* Soft glow effect */
     border-radius: 15px;
     position: relative;
@@ -539,7 +536,7 @@ nav ul li a:hover {
 l
 .prayer-wall h2 {
     font-size: 3.4em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia', sans-serif;
     margin-bottom: 50px;
     width: 100%;
     text-align: center;
@@ -559,10 +556,10 @@ l
 
 .prayer-wall form textarea {
     width: 100%;
-    height: 220px;
+    height: 150px;
     margin-bottom: 30px;
     padding: 20px;
-    font-size: 1.4em;
+    font-size: 20px;
     border: 2px solid #ccc;
     border-radius: 15px;
     background-color: #f9f9f9;
@@ -579,10 +576,10 @@ l
 }
 
 .prayer-wall form button {
-    padding: 18px 35px;
+    padding: 10px 20px;
     background-color: #f7a440;
     color: #fff;
-    font-size: 1em;
+    font-size: 17px;
     margin-bottom: 10px;
     border: none;
     border-radius: 30px;
@@ -742,9 +739,8 @@ l
 }
 
 .loading-container p {
-    font-size: 18px;
     color: #b8860b;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', sans-serif;
 }
 
 #bible-verses {
@@ -757,8 +753,7 @@ l
 
 #bible-verses h2 {
     text-align: center;
-    font-size: 28px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', sans-serif;
     color: #fff;
     margin-bottom: 15px;
     letter-spacing: 1px;
@@ -768,7 +763,6 @@ l
 }
 
 #bible-verse {
-    font-size: 20px;
     font-style: italic;
     color: #fdfdfd;
     text-align: center;
