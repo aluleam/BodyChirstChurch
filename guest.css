@@ -469,7 +469,7 @@ l
 }
 
 .prayer-wall form textarea:focus {
-    color: white; /* Dark gold */
+    color: #282828
     box-shadow: 0 8px 16px rgba(247, 164, 64, 0.3);
     outline: none;
 }
