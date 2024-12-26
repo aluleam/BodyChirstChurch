@@ -17,18 +17,6 @@
 
     <style>
         
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header section */
-        header {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
         .container-header {
             display: flex;
             justify-content: space-between;
@@ -140,8 +128,6 @@
 
 
 
-    <!-- Header Section -->
-<header>
     <div class="container-header">
         <div class="logo">
             <img src="images/bodyofchristlogo.JPG" alt="Body of Christ Church Logo">
@@ -151,21 +137,16 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
-                <li><a href="registration.html">Registration</a></li>
+                <li><a href="membership.html">Registration</a></li>
                 <li><a href="changes.html">Events</a></li>
                 <li><a href="https://www.youtube.com/@bodyofchristchurchkanisala8089">Sermons</a></li>
                 <li><a href="#prayers">Prayers</a></li>
-                <li><a href="donation.html">Giving</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
             </ul>
         </nav>
     </div>
-</header>
-
-
-
-
-
 
 <style>
     /* General Styling */
@@ -173,6 +154,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #282828;
 }
 
 
@@ -222,16 +204,26 @@ nav ul li {
 </style>
 
 
-
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         const menuIcon = document.querySelector('.menu-icon');
         const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li');
+
         menuIcon.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
     });
 </script>
+
+
 
 
 <script>
@@ -439,25 +431,9 @@ nav ul li {
         
         <div class="upcoming-events">
             <h2>Upcoming Events</h2>
-            <ul>
-                <li>
-                    <strong>Church Service</strong>
-                    <span>January 15, 2024</span>
-                    <p>Join us for an inspiring service led by our senior pastor. We will explore topics of faith and fellowship.</p>
-                </li>
-                <li>
-                    <strong>Charity Event</strong>
-                    <span>February 10, 2024</span>
-                    <p>Help us raise funds for the local community. Your support will make a difference in many lives.</p>
-                </li>
-                <li>
-                    <strong>Bible Study</strong>
-                    <span>March 5, 2024</span>
-                    <p>Dig deeper into the scriptures and learn the lessons that apply to our daily lives.</p>
-                </li>
-            </ul>
+            <iframe src="eventscalender.html" width="100%" height="400px" style="border: none;"></iframe>
         </div>
-    
+        
     <!-- Ministries Section -->
     <section id="ministries" class="ministries">
         <div class="container">
@@ -467,17 +443,17 @@ nav ul li {
                 <div class="ministry-card">
                     <h3>Youth Ministry</h3>
                     <p>Our youth ministry empowers young people to grow in faith and make a positive impact in the community.</p>
-                    <a href="registration.html" class="ministry-btn">Join us</a>
+                    <a href="membership.html" class="ministry-btn">Join us</a>
                 </div>
                 <div class="ministry-card">
                     <h3>Family Ministry</h3>
                     <p>Join a group that nurtures family bonds, fostering growth in Christ through fellowship, study, and prayer.</p>
-                    <a href="registration.html" class="ministry-btn">Join us</a>
+                    <a href="membership.html" class="ministry-btn">Join us</a>
                 </div>
                 <div class="ministry-card">
                     <h3>Music Ministry</h3>
                     <p>Our music ministry helps lead worship through song, creating a powerful atmosphere of praise and adoration.</p>
-                    <a href="registration.html" class="ministry-btn">Join us</a>
+                    <a href="membership.html" class="ministry-btn">Join us</a>
                 </div>
             </div>
         </div>
@@ -492,17 +468,17 @@ nav ul li {
                 <div class="sermon-item">
                     <h3>Title of Recent Sermon</h3>
                     <p>Date: December 10th, 2024</p>
-                    <a href="/sermons/recent-sermon" class="sermon-btn">Watch Now</a>
+                    <a href="livestream.html" class="sermon-btn">Watch Now</a>
                 </div>
                 <div class="sermon-item">
                     <h3>Faith in Action</h3>
                     <p>Date: November 28th, 2024</p>
-                    <a href="/sermons/faith-in-action" class="sermon-btn">Watch Now</a>
+                    <a href="livestream.html" class="sermon-btn">Watch Now</a>
                 </div>
                 <div class="sermon-item">
                     <h3>Living With Purpose</h3>
                     <p>Date: November 15th, 2024</p>
-                    <a href="/sermons/living-with-purpose" class="sermon-btn">Watch Now</a>
+                    <a href="livestream.html" class="sermon-btn">Watch Now</a>
                 </div>
             </div>
         </div>
@@ -598,8 +574,20 @@ nav ul li {
                 <h3>Our Location</h3>
                 <p>6201 S Lyncrest Ave, Sioux Falls, SD 57108</p>
             </div>
-
-
+            
+            <style>
+                footer{
+                    margin-top: 50px;
+                    color: white;
+                    background-color: #282828;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+            <footer>
+                <p>&copy; 2024 Body of Christ Church. All rights reserved.</p>
+            </footer>
 
                 <style>
                 #contact {
