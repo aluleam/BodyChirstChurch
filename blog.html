@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -216,13 +218,112 @@
         <p>Stay connected with the latest news, insights, and inspirations from Body of Christ Church.</p>
     </header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="livestream.html">Sermons</a>
-        <a href="donation.html">Donations</a>
-        <a href="contact.html">Contact</a>
-    </nav>
 
+          <div class = "ham-menu">
+            <div class="menu-icon">&#9776;</div>
+            <ul class = "nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="livestream.html">Sermons</a></li>
+                <li><a href="donation.html">Donations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+          </div>
+
+            <style>
+                .ham-menu {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px 20px;
+                    background-color: #282828;
+                    color: #C08F4A;
+                }
+                .nav-links a[href="index.html"] {
+                    color:  #282828;
+                   
+                }
+                .nav-links a[href="livestream.html"] {
+                    color:  #282828;
+                }
+
+                .nav-links a[href="donation.html"] {
+                    color:  #282828;
+
+                }   
+
+                .nav-links a[href="contact.html"] {
+                    color:  #282828;
+
+                }
+            </style>
+
+    <style>
+    nav ul {
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
+    
+    .menu-icon {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .menu-icon {
+            display: block;
+        }
+    }
+    
+    </style>
+    
+    
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-links li');
+    
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+    
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    
+    
     <!-- Search Bar -->
     <div class="search-bar">
         <input type="text" placeholder="Search blog posts..." id="search-input">
