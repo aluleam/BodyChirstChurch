@@ -153,6 +153,43 @@
         .download-button:hover {
             background-color: #444;
         }
+       
+
+            .home-container {
+                width: 100%;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                background-color: #524b4b;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #C08F4A;
+                padding: 10px;
+                border: 1px solid transparent;
+            }
+
+            nav a:hover {
+                border-color: black;
+               
+            }
+
+            @media (max-width: 600px) {
+                nav {
+                    justify-content: center;
+                }
+
+                nav a {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
 
         /* Footer */
         footer {
@@ -162,6 +199,7 @@
             padding: 20px;
             font-size: 1rem;
         }
+
     </style>
 </head>
 <body>
@@ -171,13 +209,16 @@
         <p>Access important documents, upcoming events, and church resources to help you grow spiritually.</p>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="donation.html">Donations</a>
-        <a href="blog.html">Blog</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+
+    <div class = "home-container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="donation.html">Donations</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 
     <!-- Search Bar -->
     <div class="search-bar">
