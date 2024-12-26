@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streaming - Body of Christ Church</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #282828;
+            color: #C08F4A; /* Dark gold */
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #C08F4A;
+        }
+        .live-stream-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            max-width: 960px;
+            width: 100%;
+            background-color: black;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 540px;
+        }
+        .upcoming-events {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+        .event {
+            margin: 10px 0;
+        }
+        .event h3 {
+            margin: 0;
+            color: #C08F4A;
+        }
+        .event p {
+            margin: 5px 0;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Live Streaming - Body of Christ Church</h1>
+    </header>
+
+    <section class="live-stream-container">
+        <h2>Watch Our Live Service</h2>
+        <p>Join us for our live worship services, right from the comfort of your home!</p>
+        
+        <div class="video-container">
+            <!-- Embed your YouTube live stream here -->
+            <iframe src="https://www.youtube.com/embed/live_stream?channel=bodyofchristchurchkanisala8089" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <p><strong>Upcoming Live Events:</strong></p>
+        <div class="upcoming-events">
+            <div class="event">
+                <h3>Sunday Worship Service</h3>
+                <p>Date: Every Sunday, 10:00 AM (Central Time)</p>
+                <p>Join us for our regular Sunday worship service live stream.</p>
+            </div>
+            <div class="event">
+                <h3>Wednesday Bible Study</h3>
+                <p>Date: Every Wednesday, 7:00 PM (Central Time)</p>
+                <p>Join us for our Bible Study series, streamed live each week.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Body of Christ Church - All Rights Reserved</p>
+        <p><a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="contact.html" style="color: white;">Contact Us</a></p>
+    </footer>
+</body>
+</html>

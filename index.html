@@ -95,13 +95,13 @@
         }
 
         .topnav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #282828;
+            color: #C08F4A; /* Dark gold */
         }
 
         .active {
-            background-color: #04AA6D;
-            color: white;
+            background-color: #282828;
+            color: #C08F4A; /* Dark gold */
         }
 
         /* Show the menu when the icon is clicked */
@@ -137,14 +137,18 @@
 </head>
 <body>
 
-<!-- Header Section -->
+
+
+
+    <!-- Header Section -->
 <header>
     <div class="container-header">
         <div class="logo">
             <img src="images/bodyofchristlogo.JPG" alt="Body of Christ Church Logo">
         </div>
+        <i class="fa fa-bars menu-icon" aria-hidden="true"></i>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
                 <li><a href="registration.html">Registration</a></li>
@@ -157,6 +161,79 @@
         </nav>
     </div>
 </header>
+
+
+
+
+
+
+<style>
+    /* General Styling */
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+</style>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    });
+</script>
+
+
 <script>
     function myFunction() {
         var x = document.getElementById("myLinks");
@@ -173,7 +250,7 @@
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
-        color:#f7a440;
+        color: #C08F4A
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.8);
         letter-spacing: 0.1em;
         overflow: hidden;
@@ -219,7 +296,7 @@
 
 
    <style>
-            * {
+        * {
         box-sizing: border-box;
         }
 
@@ -555,7 +632,7 @@
 
                 .contact-form h3 {
                     font-size: 2em;
-                    color: #333;
+                    color: #282828; 
                     margin-bottom: 10px;
                     
                 }
@@ -586,13 +663,13 @@
                 .form-group input:focus,
                 .form-group textarea:focus {
                     border-color: #f7a440;
-                    box-shadow: 0 0 5px rgba(247, 164, 64, 0.7);
+                    box-shadow: 0 0 5px  #C08F4A; /* Dark gold */;
                 }
 
                 .submit-btn {
                     display: inline-block;
-                    background-color: #f7a440;
-                    color: #fff;
+                    background-color: #282828;
+                    color: #C08F4A; /* Dark gold */
                     padding: 15px 25px;
                     font-size: 1.2em;
                     border-radius: 8px;
@@ -604,7 +681,7 @@
                 }
 
                 .submit-btn:hover {
-                    background-color: #d88e31;
+                    
                     transform: translateY(-5px);
                 }
 
@@ -613,6 +690,7 @@
                     flex: 1;
                     background-color: #fff;
                     border-radius: 10px;
+                    color: #282828;
                     width: 100%;
                     margin-left: auto;
                     margin-right: auto;
