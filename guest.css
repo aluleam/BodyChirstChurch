@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 html, body {
@@ -86,7 +86,7 @@ html, body {
 .upcoming-events {
     background-color: #282828; 
     padding: 80px 20px;
-    font-family: 'Georgia';
+    font-family: 'Roboto', sans-serif;
     color: #333;
 }
 
@@ -436,7 +436,7 @@ html, body {
 l
 .prayer-wall h2 {
     font-size: 3.4em;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 50px;
     width: 100%;
     text-align: center;
@@ -572,7 +572,7 @@ l
 
 .loading-container p {
     color: #b8860b;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #bible-verses {
@@ -586,7 +586,7 @@ l
 
 #bible-verses h2 {
     text-align: center;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     margin-bottom: 15px;
     letter-spacing: 1px;
@@ -599,7 +599,7 @@ l
     font-style: italic;
     color: #fdfdfd;
     text-align: center;
-    font-family: 'Georgia', serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 20px;
     line-height: 1.6;
     transition: transform 0.3s ease-in-out;
