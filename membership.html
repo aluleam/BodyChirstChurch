@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Body of Christ Church</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #282828;
+            color: #C08F4A; /* Dark gold */
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #C08F4A; /* Dark gold */
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #C08F4A;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #C08F4A;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Become a Member of Body of Christ Church</h1>
+    </header>
+    <section>
+        <h2>Why Become a Member?</h2>
+        <p>Joining Body of Christ Church is a step toward spiritual growth, community, and service. As a member, you’ll have access to various benefits, including:</p>
+        <ul>
+            <li>Access to exclusive church events and activities</li>
+            <li>Opportunities to serve in ministry</li>
+            <li>Spiritual guidance and support from our pastors and leaders</li>
+            <li>Participation in church decision-making processes</li>
+        </ul>
+    </section>
+    <section>
+        <h2>How to Become a Member</h2>
+        <p>We invite you to become a member through the following steps:</p>
+        <ol>
+            <li>Attend church regularly to learn about our church's mission and vision.</li>
+            <li>Fill out the membership application form below.</li>
+            <li>Meet with one of our pastors for a brief interview.</li>
+            <li>Take the membership oath and begin your journey as a member!</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Membership Application</h2>
+        <p>Please complete the application form below:</p>
+        <form action="https://formspree.io/f/xnnnnblb" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="message">Why do you want to join our church?</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+</body>
+</html>

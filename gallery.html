@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Body of Christ Church</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #282828;
+            color: #C08F4A; /* Dark gold */
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1rem;
+            font-weight: lighter;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .gallery-item::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <p>Experience the moments of fellowship and worship</p>
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            <!-- Gallery Items with Images and Captions -->
+            <div class="gallery-item">
+                <img src="path_to_image1.jpg" alt="Event 1">
+                <div class="caption">Worship Night</div>
+            </div>
+            <div class="gallery-item">
+                <img src="path_to_image2.jpg" alt="Event 2">
+                <div class="caption">Community Outreach</div>
+            </div>
+            <div class="gallery-item">
+                <img src="path_to_image3.jpg" alt="Event 3">
+                <div class="caption">Bible Study Group</div>
+            </div>
+            <div class="gallery-item">
+                <img src="path_to_image4.jpg" alt="Event 4">
+                <div class="caption">Youth Fellowship</div>
+            </div>
+            <div class="gallery-item">
+                <img src="path_to_image5.jpg" alt="Event 5">
+                <div class="caption">Christmas Celebration</div>
+            </div>
+            <div class="gallery-item">
+                <img src="path_to_image6.jpg" alt="Event 6">
+                <div class="caption">Prayer Meeting</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

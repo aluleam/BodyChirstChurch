@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Calendar - Body of Christ Church</title>
+    
+    <!-- FullCalendar CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" rel="stylesheet" />
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #calendar {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #b8860b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Church Events Calendar</h1>
+        <div id="calendar"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                events: [
+                    {
+                        title: 'New Year Service',
+                        start: '2025-01-01T10:00:00',
+                        description: 'Join us for a special New Year service with prayer and worship.',
+                        location: 'Main Sanctuary',
+                        color: '#b8860b', // Gold color for event
+                        url: 'https://www.bodyofchristchurch.org/events/newyearservice'
+                    },
+                    {
+                        title: 'Christmas Celebration',
+                        start: '2024-12-25T17:00:00',
+                        description: 'Merry Christmas! A time of celebration and fellowship.',
+                        location: 'Fellowship Hall',
+                        color: '#ff6347', // Event color
+                        url: 'https://www.bodyofchristchurch.org/events/christmas'
+                    },
+                    {
+                        title: 'Weekly Prayer Meeting',
+                        start: '2024-12-29T18:00:00',
+                        description: 'Join us for our weekly prayer meeting.',
+                        location: 'Prayer Room',
+                        color: '#228b22', // Green color for prayer meetings
+                        url: 'https://www.bodyofchristchurch.org/events/prayermeeting'
+                    },
+                    // Recurring Sunday Service
+                    {
+                        title: 'Weekly Sunday Service',
+                        start: '2024-12-29T13:00:00',
+                        end: '2024-12-29T16:00:00',
+                        description: 'Join us every Sunday from 1:00 PM to 4:00 PM for our Sunday Service.',
+                        location: 'Main Sanctuary',
+                        color: '#b8860b', // Gold color for event
+                        url: 'https://www.bodyofchristchurch.org/events/sundayservice',
+                        recurring: true, // Make this event repeat every week
+                        dow: [0], // 0 represents Sunday
+                        duration: '03:00' // 3 hours duration
+                    }
+                ],
+                eventClick: function(event) {
+                    alert('Event: ' + event.title + '\n' +
+                          'Description: ' + event.description + '\n' +
+                          'Location: ' + event.location);
+                },
+                eventRender: function(event, element) {
+                    element.attr('title', event.description); // Show description on hover
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
